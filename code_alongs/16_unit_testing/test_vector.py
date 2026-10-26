@@ -6,7 +6,7 @@ def test_valid_init():
 
 def test_invalid_init():
     with raises(TypeError):
-    Vector(1,2,"3")
+        Vector(1,2,"3")
 
 def test_invalid_empty_vector():
     with raises(ValueError):
@@ -21,10 +21,9 @@ def test_addition():
 def test_invalid_adding_two_types():
     v1 = Vector(1, 2, 3)
 
-    for right_operand in [(1,2,3), "just a string", [1,2,3]]
-    
-    with raises(TypeError):
-        v1 + right_operand  
+    for right_operand in [(1,2,3), "just a string", [1,2,3]]:
+        with raises(TypeError):
+            v1 + right_operand
 
 def test_substraction():
     v1 = Vector(1, 2)
